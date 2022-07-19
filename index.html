@@ -96,7 +96,11 @@
   </nav>
 </div>
 
-  <div class="post-list post"><a class="post-card post " href="/2022/07/19/hello-world/">
+  <div class="post-list post"><a class="post-card post " href="/2022/07/19/%E5%B0%8F%E8%88%B9/">
+<article class="md"><h2 class="post-title">2022-07-19</h2><div class="excerpt"><p>小船　　    “人无法两次踏进同一条河流。”
+　　曾经我有一个朋友，他从西域来，骑一匹汗血宝马，佩一柄弯月般的刀。这话是他告诉我的，据说是个伟大哲人说的，那哲人伟大得如同夫子庙中的至圣先师。　　可惜我并不相信，因为他这么说的时候已经喝醉了，正呆呆的凝望着摇曳的篝火。那时候寒风很冷，我的朋友很忧郁，雪前的天空里没有星辰，我在地下打瞌睡。　　那已经是很久以前了。
+　　“如果给你重来一次的机会，...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-07-19T07:38:30.325Z">2022-07-19</time></span></div></article>
+</a><a class="post-card post " href="/2022/07/19/hello-world/">
 <article class="md"><h2 class="post-title">Hello World</h2><div class="excerpt"><p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
 Qu...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-07-19T05:50:10.246Z">2022-07-19</time></span></div></article>
 </a></div>
@@ -257,6 +261,27 @@ Qu...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&
 
 
 <!-- optional -->
+
+  <script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js","envId":"https://xxx"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 
