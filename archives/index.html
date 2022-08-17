@@ -58,13 +58,13 @@
 <header class="header">
 
 <div class="logo-wrap"><a class="avatar" href="/images/%E5%A4%B4%E5%83%8F.jpg"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/头像.jpg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/about/"><div class="main">Arisu</div><div class="sub normal cap">文字是拯救世界的唯一力量</div><div class="sub hover cap" style="opacity:0">唯一的愿望...</div></a></div>
-<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav></header>
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes/">便筏</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav></header>
 
 <div class="widgets">
-<div class="widget-wrap" id="markdown"><div class="widget-header cap dis-select"><span class="name">公告</span></div><div class="widget-body fs14"><p>本站建于2022.7.19。<br><span id="hitokoto">正在加载一言……</span></p>
+<div class="widget-wrap" id="markdown"><div class="widget-header cap dis-select"><span class="name">公告</span></div><div class="widget-body fs14"><p>本站建于2022.7.19。<br><a target="_blank" rel="noopener" href="https://space.bilibili.com/384777633">https://space.bilibili.com/384777633</a></p>
 </div></div>
 
-<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/08/12/%E6%9C%89%E6%84%9F/">慢慢搬运</a></div><div class="more-item"><a class="title" href="/2022/08/15/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E5%B0%9D%E8%AF%95/">插入图片的尝试</a></div><div class="more-item"><a class="title" href="/2022/07/19/hello-world/">Hello World</a></div></div></div>
+<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/08/17/20220817/">20220817</a></div><div class="more-item"><a class="title" href="/2022/07/19/hello-world/">Hello World</a></div><div class="more-item"><a class="title" href="/2022/08/16/%E6%8A%A5%E9%94%99%E7%9A%84%E4%B8%80%E5%A4%A9/">报错的一天</a></div><div class="more-item"><a class="title" href="/2022/08/12/%E6%9C%89%E6%84%9F/">慢慢搬运</a></div><div class="more-item"><a class="title" href="/2022/08/15/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E5%B0%9D%E8%AF%95/">插入图片的尝试</a></div></div></div>
 </div>
 
 
@@ -119,6 +119,12 @@
   		
   		
   	
+  		
+  		
+  	
+  		
+  		
+  	
   	
   		<article class='' id='archive'>
   			<div class='archive-header h4'>2022</div>
@@ -131,6 +137,32 @@
   		    
   				
   		    
+  				
+  		    
+  				
+  		    
+  				<div class='archive-list'>
+            <a class='post fs14' href="/2022/08/17/20220817/">
+    					<time>08-17</time>
+    					<span>
+                
+      						20220817
+      					
+              </span>
+    				</a>
+          </div>
+  			
+  				<div class='archive-list'>
+            <a class='post fs14' href="/2022/08/16/%E6%8A%A5%E9%94%99%E7%9A%84%E4%B8%80%E5%A4%A9/">
+    					<time>08-16</time>
+    					<span>
+                
+      						报错的一天
+      					
+              </span>
+    				</a>
+          </div>
+  			
   				<div class='archive-list'>
             <a class='post fs14' href="/2022/08/15/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E5%B0%9D%E8%AF%95/">
     					<time>08-15</time>
@@ -335,25 +367,28 @@
 <!-- optional -->
 
   <script>
-    function load_twikoo() {
-        if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        stellar.loadScript('https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js', {defer: true}).then(function () {
-            const el = document.getElementById("twikoo_container");
-            var path = el.getAttribute('comment_id');
-            if (!path) {
-                path = decodeURI(window.location.pathname);
-            }
-            twikoo.init(Object.assign({"js":"https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js","envId":"https://xxx"}, {
-                el: '#twikoo_container',
-                path: path,
-            }));
-        });
-    }
-
-    window.addEventListener('DOMContentLoaded', (event) => {
-        load_twikoo();
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://unpkg.com/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://unpkg.com/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","serverURL":null,"commentCount":true,"pageview":false}, {
+        el: '#waline_container',
+        path: path,
+      }));
     });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
 </script>
+
 
 
 
